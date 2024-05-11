@@ -182,7 +182,7 @@ class AppBarBackButton extends StatelessWidget {
 
     return IconButton(
       padding: AppAppBar.padding,
-      onPressed: onPressed ?? context.router.pop,
+      onPressed: onPressed ?? context.router.maybePop,
       icon: icon,
     );
   }

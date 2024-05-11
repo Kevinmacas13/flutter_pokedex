@@ -3,7 +3,7 @@
   "dart.previewFlutterUiGuides": true,
   "dart.previewFlutterUiGuidesCustomTracking": true,
   "dart.lineLength": 100,
-  "dart.flutterSdkPath": ".fvm/flutter_sdk",
+  "dart.flutterSdkPath": ".fvm/versions/3.19.5",
   "[dart]": {
     "editor.rulers": [100],
     "editor.selectionHighlight": false,
@@ -35,3 +35,4 @@
     "**/*.config.dart": true
   }
 }
+
