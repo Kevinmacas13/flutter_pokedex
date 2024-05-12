@@ -20,6 +20,10 @@ FutureOr<void> configureDependencies() => getIt.init();
 abstract class RegisterModule {
   @singleton
   Dio get dio => Dio();
+
+  @singleton
+  @Named("pokeapi")
+  Dio get pokeapiDio => Dio(BaseOptions(baseUrl: 'https://pokeapi.co/api/v2'));
 }
 
 class GlobalBlocProviders extends StatelessWidget {

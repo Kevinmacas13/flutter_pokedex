@@ -3,14 +3,16 @@ import 'dart:async';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pokedex/di.dart';
 import 'package:pokedex/presenter/navigation/navigation.dart';
+import 'package:pokedex/presenter/pages/pokedex/pokedex_bloc.dart';
+import 'package:pokedex/presenter/pages/pokedex/pokedex_event.dart';
+import 'package:pokedex/presenter/pages/pokedex/pokedex_selector.dart';
+import 'package:pokedex/presenter/pages/pokedex/pokedex_state.dart';
 import 'package:pokedex/presenter/widgets/loading.dart';
 import 'package:pokedex/utils/extensions/animation.dart';
-import 'package:pokedex/data/entities/pokemon.dart';
 import 'package:pokedex/data/states/pokemon/pokemon_bloc.dart';
 import 'package:pokedex/data/states/pokemon/pokemon_event.dart';
-import 'package:pokedex/data/states/pokemon/pokemon_selector.dart';
-import 'package:pokedex/data/states/pokemon/pokemon_state.dart';
 import 'package:pokedex/presenter/modals/generation_modal.dart';
 import 'package:pokedex/presenter/modals/search_modal.dart';
 import 'package:pokedex/presenter/widgets/app_bar.dart';
@@ -24,14 +26,33 @@ part 'sections/fab_menu.dart';
 part 'sections/pokemon_grid.dart';
 
 @RoutePage()
-class PokedexPage extends StatefulWidget {
+class PokedexPage extends StatefulWidget implements AutoRouteWrapper {
   const PokedexPage({super.key});
 
   @override
   State<StatefulWidget> createState() => _PokedexPageState();
+
+  @override
+  Widget wrappedRoute(BuildContext context) {
+    return BlocProvider(
+      create: (_) => getIt.get<PokedexBloc>(),
+      child: this,
+    );
+  }
 }
 
 class _PokedexPageState extends State<PokedexPage> {
+  PokedexBloc get _bloc => context.read<PokedexBloc>();
+
+  @override
+  void initState() {
+    super.initState();
+
+    scheduleMicrotask(() {
+      _bloc.add(PokedexEvent.loadPokemonsStarted());
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return PokeballScaffold(

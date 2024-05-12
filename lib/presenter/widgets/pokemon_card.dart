@@ -9,7 +9,7 @@ class PokemonCard extends StatelessWidget {
   static const double _pokeballFraction = 0.75;
   static const double _pokemonFraction = 0.76;
 
-  final Pokemon pokemon;
+  final BasicPokemon pokemon;
   final void Function()? onPress;
 
   const PokemonCard(
@@ -83,7 +83,7 @@ class PokemonCard extends StatelessWidget {
       right: 2,
       child: PokemonImage(
         size: Size.square(pokemonSize),
-        pokemon: pokemon,
+        url: pokemon.image,
       ),
     );
   }
@@ -105,7 +105,7 @@ class PokemonCard extends StatelessWidget {
 }
 
 class _CardContent extends StatelessWidget {
-  final Pokemon pokemon;
+  final BasicPokemon pokemon;
 
   const _CardContent(this.pokemon);
 

@@ -40,7 +40,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void _onLoaded(SplashState value) {
-    context.router.push(const HomeRoute());
+    context.router.replaceAll([const HomeRoute()]);
   }
 
   @override
