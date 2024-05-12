@@ -6,20 +6,21 @@ import 'package:pokedex/data/entities/pokemon_properties.dart';
 import 'package:pokedex/data/entities/pokemon_types.dart';
 
 part 'pokemon.freezed.dart';
-part 'pokemon.g.dart';
 
 // FIXME: Abstracting Pokemon class
 
 @freezed
 class BasicPokemon with _$BasicPokemon {
   const factory BasicPokemon({
-    required int number,
+    required int id,
     required String name,
     required String image,
     required List<PokemonTypes> types,
   }) = _BasicPokemon;
 
   const BasicPokemon._();
+
+  String get number => "#${"$id".padLeft(3, "0")}";
 
   Color get color => types.first.color;
 }
@@ -44,9 +45,6 @@ class Pokemon with _$Pokemon {
   }) = _Pokemon;
 
   const Pokemon._();
-
-  factory Pokemon.fromJson(Map<String, Object?> json) =>
-      _$PokemonFromJson(json);
 
   Color get color => types.first.color;
 

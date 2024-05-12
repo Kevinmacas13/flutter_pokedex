@@ -1,10 +1,10 @@
 import 'package:injectable/injectable.dart';
-import 'package:pokedex/core/usecase.dart';
+import 'package:pokedex/core/use_case.dart';
 import 'package:pokedex/data/repositories/pokemon_repository.dart';
 import 'package:pokedex/data/entities/pokemon.dart';
 
 @singleton
-class GetAllPokemonsUseCase extends UseCase<List<Pokemon>, NoParams?> {
+final class GetAllPokemonsUseCase extends UseCase<List<Pokemon>, NoParams?> {
   final PokemonRepository _pokemonRepository;
 
   const GetAllPokemonsUseCase({
@@ -28,7 +28,8 @@ class GetPokemonsParams {
 }
 
 @singleton
-class GetPokemonsUseCase extends UseCase<List<Pokemon>, GetPokemonsParams> {
+final class GetPokemonsUseCase
+    extends UseCase<List<Pokemon>, GetPokemonsParams> {
   final PokemonRepository _pokemonRepository;
 
   const GetPokemonsUseCase({
@@ -37,7 +38,8 @@ class GetPokemonsUseCase extends UseCase<List<Pokemon>, GetPokemonsParams> {
 
   @override
   Future<List<Pokemon>> call(GetPokemonsParams params) {
-    return _pokemonRepository.getPokemons(page: params.page, limit: params.limit);
+    return _pokemonRepository.getPokemons(
+        page: params.page, limit: params.limit);
   }
 }
 
@@ -48,7 +50,7 @@ class GetPokemonParam {
 }
 
 @singleton
-class GetPokemonUseCase extends UseCase<Pokemon?, GetPokemonParam> {
+final class GetPokemonUseCase extends UseCase<Pokemon?, GetPokemonParam> {
   final PokemonRepository _pokemonRepository;
 
   const GetPokemonUseCase({

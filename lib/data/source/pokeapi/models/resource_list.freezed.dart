@@ -409,3 +409,175 @@ abstract class _PokeApiNamedResourceList implements PokeApiNamedResourceList {
   _$$PokeApiNamedResourceListImplCopyWith<_$PokeApiNamedResourceListImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+PokeApiPaginatedParams _$PokeApiPaginatedParamsFromJson(
+    Map<String, dynamic> json) {
+  return _PokeApiPaginatedParams.fromJson(json);
+}
+
+/// @nodoc
+mixin _$PokeApiPaginatedParams {
+  int get limit => throw _privateConstructorUsedError;
+  int get offset => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PokeApiPaginatedParamsCopyWith<PokeApiPaginatedParams> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PokeApiPaginatedParamsCopyWith<$Res> {
+  factory $PokeApiPaginatedParamsCopyWith(PokeApiPaginatedParams value,
+          $Res Function(PokeApiPaginatedParams) then) =
+      _$PokeApiPaginatedParamsCopyWithImpl<$Res, PokeApiPaginatedParams>;
+  @useResult
+  $Res call({int limit, int offset});
+}
+
+/// @nodoc
+class _$PokeApiPaginatedParamsCopyWithImpl<$Res,
+        $Val extends PokeApiPaginatedParams>
+    implements $PokeApiPaginatedParamsCopyWith<$Res> {
+  _$PokeApiPaginatedParamsCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? limit = null,
+    Object? offset = null,
+  }) {
+    return _then(_value.copyWith(
+      limit: null == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int,
+      offset: null == offset
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$PokeApiPaginatedParamsImplCopyWith<$Res>
+    implements $PokeApiPaginatedParamsCopyWith<$Res> {
+  factory _$$PokeApiPaginatedParamsImplCopyWith(
+          _$PokeApiPaginatedParamsImpl value,
+          $Res Function(_$PokeApiPaginatedParamsImpl) then) =
+      __$$PokeApiPaginatedParamsImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int limit, int offset});
+}
+
+/// @nodoc
+class __$$PokeApiPaginatedParamsImplCopyWithImpl<$Res>
+    extends _$PokeApiPaginatedParamsCopyWithImpl<$Res,
+        _$PokeApiPaginatedParamsImpl>
+    implements _$$PokeApiPaginatedParamsImplCopyWith<$Res> {
+  __$$PokeApiPaginatedParamsImplCopyWithImpl(
+      _$PokeApiPaginatedParamsImpl _value,
+      $Res Function(_$PokeApiPaginatedParamsImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? limit = null,
+    Object? offset = null,
+  }) {
+    return _then(_$PokeApiPaginatedParamsImpl(
+      limit: null == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int,
+      offset: null == offset
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PokeApiPaginatedParamsImpl
+    with DiagnosticableTreeMixin
+    implements _PokeApiPaginatedParams {
+  const _$PokeApiPaginatedParamsImpl(
+      {required this.limit, required this.offset});
+
+  factory _$PokeApiPaginatedParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PokeApiPaginatedParamsImplFromJson(json);
+
+  @override
+  final int limit;
+  @override
+  final int offset;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'PokeApiPaginatedParams(limit: $limit, offset: $offset)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'PokeApiPaginatedParams'))
+      ..add(DiagnosticsProperty('limit', limit))
+      ..add(DiagnosticsProperty('offset', offset));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PokeApiPaginatedParamsImpl &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.offset, offset) || other.offset == offset));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, limit, offset);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PokeApiPaginatedParamsImplCopyWith<_$PokeApiPaginatedParamsImpl>
+      get copyWith => __$$PokeApiPaginatedParamsImplCopyWithImpl<
+          _$PokeApiPaginatedParamsImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PokeApiPaginatedParamsImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _PokeApiPaginatedParams implements PokeApiPaginatedParams {
+  const factory _PokeApiPaginatedParams(
+      {required final int limit,
+      required final int offset}) = _$PokeApiPaginatedParamsImpl;
+
+  factory _PokeApiPaginatedParams.fromJson(Map<String, dynamic> json) =
+      _$PokeApiPaginatedParamsImpl.fromJson;
+
+  @override
+  int get limit;
+  @override
+  int get offset;
+  @override
+  @JsonKey(ignore: true)
+  _$$PokeApiPaginatedParamsImplCopyWith<_$PokeApiPaginatedParamsImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}

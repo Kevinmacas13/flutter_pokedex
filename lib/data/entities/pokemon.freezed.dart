@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$BasicPokemon {
-  int get number => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
   List<PokemonTypes> get types => throw _privateConstructorUsedError;
@@ -32,7 +32,7 @@ abstract class $BasicPokemonCopyWith<$Res> {
           BasicPokemon value, $Res Function(BasicPokemon) then) =
       _$BasicPokemonCopyWithImpl<$Res, BasicPokemon>;
   @useResult
-  $Res call({int number, String name, String image, List<PokemonTypes> types});
+  $Res call({int id, String name, String image, List<PokemonTypes> types});
 }
 
 /// @nodoc
@@ -48,15 +48,15 @@ class _$BasicPokemonCopyWithImpl<$Res, $Val extends BasicPokemon>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? number = null,
+    Object? id = null,
     Object? name = null,
     Object? image = null,
     Object? types = null,
   }) {
     return _then(_value.copyWith(
-      number: null == number
-          ? _value.number
-          : number // ignore: cast_nullable_to_non_nullable
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as int,
       name: null == name
           ? _value.name
@@ -82,7 +82,7 @@ abstract class _$$BasicPokemonImplCopyWith<$Res>
       __$$BasicPokemonImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int number, String name, String image, List<PokemonTypes> types});
+  $Res call({int id, String name, String image, List<PokemonTypes> types});
 }
 
 /// @nodoc
@@ -96,15 +96,15 @@ class __$$BasicPokemonImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? number = null,
+    Object? id = null,
     Object? name = null,
     Object? image = null,
     Object? types = null,
   }) {
     return _then(_$BasicPokemonImpl(
-      number: null == number
-          ? _value.number
-          : number // ignore: cast_nullable_to_non_nullable
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as int,
       name: null == name
           ? _value.name
@@ -126,7 +126,7 @@ class __$$BasicPokemonImplCopyWithImpl<$Res>
 
 class _$BasicPokemonImpl extends _BasicPokemon with DiagnosticableTreeMixin {
   const _$BasicPokemonImpl(
-      {required this.number,
+      {required this.id,
       required this.name,
       required this.image,
       required final List<PokemonTypes> types})
@@ -134,7 +134,7 @@ class _$BasicPokemonImpl extends _BasicPokemon with DiagnosticableTreeMixin {
         super._();
 
   @override
-  final int number;
+  final int id;
   @override
   final String name;
   @override
@@ -149,7 +149,7 @@ class _$BasicPokemonImpl extends _BasicPokemon with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'BasicPokemon(number: $number, name: $name, image: $image, types: $types)';
+    return 'BasicPokemon(id: $id, name: $name, image: $image, types: $types)';
   }
 
   @override
@@ -157,7 +157,7 @@ class _$BasicPokemonImpl extends _BasicPokemon with DiagnosticableTreeMixin {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'BasicPokemon'))
-      ..add(DiagnosticsProperty('number', number))
+      ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('image', image))
       ..add(DiagnosticsProperty('types', types));
@@ -168,14 +168,14 @@ class _$BasicPokemonImpl extends _BasicPokemon with DiagnosticableTreeMixin {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BasicPokemonImpl &&
-            (identical(other.number, number) || other.number == number) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.image, image) || other.image == image) &&
             const DeepCollectionEquality().equals(other._types, _types));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, number, name, image,
+  int get hashCode => Object.hash(runtimeType, id, name, image,
       const DeepCollectionEquality().hash(_types));
 
   @JsonKey(ignore: true)
@@ -187,14 +187,14 @@ class _$BasicPokemonImpl extends _BasicPokemon with DiagnosticableTreeMixin {
 
 abstract class _BasicPokemon extends BasicPokemon {
   const factory _BasicPokemon(
-      {required final int number,
+      {required final int id,
       required final String name,
       required final String image,
       required final List<PokemonTypes> types}) = _$BasicPokemonImpl;
   const _BasicPokemon._() : super._();
 
   @override
-  int get number;
+  int get id;
   @override
   String get name;
   @override
@@ -205,10 +205,6 @@ abstract class _BasicPokemon extends BasicPokemon {
   @JsonKey(ignore: true)
   _$$BasicPokemonImplCopyWith<_$BasicPokemonImpl> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-Pokemon _$PokemonFromJson(Map<String, dynamic> json) {
-  return _Pokemon.fromJson(json);
 }
 
 /// @nodoc
@@ -228,7 +224,6 @@ mixin _$Pokemon {
   List<Pokemon> get evolutions => throw _privateConstructorUsedError;
   String get evolutionReason => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $PokemonCopyWith<Pokemon> get copyWith => throw _privateConstructorUsedError;
 }
@@ -480,7 +475,7 @@ class __$$PokemonImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
 class _$PokemonImpl extends _Pokemon with DiagnosticableTreeMixin {
   const _$PokemonImpl(
       {required this.number,
@@ -501,9 +496,6 @@ class _$PokemonImpl extends _Pokemon with DiagnosticableTreeMixin {
         _eggGroups = eggGroups,
         _evolutions = evolutions,
         super._();
-
-  factory _$PokemonImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PokemonImplFromJson(json);
 
   @override
   final String number;
@@ -603,7 +595,6 @@ class _$PokemonImpl extends _Pokemon with DiagnosticableTreeMixin {
                 other.evolutionReason == evolutionReason));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -627,13 +618,6 @@ class _$PokemonImpl extends _Pokemon with DiagnosticableTreeMixin {
   @pragma('vm:prefer-inline')
   _$$PokemonImplCopyWith<_$PokemonImpl> get copyWith =>
       __$$PokemonImplCopyWithImpl<_$PokemonImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PokemonImplToJson(
-      this,
-    );
-  }
 }
 
 abstract class _Pokemon extends Pokemon {
@@ -653,8 +637,6 @@ abstract class _Pokemon extends Pokemon {
       required final List<Pokemon> evolutions,
       required final String evolutionReason}) = _$PokemonImpl;
   const _Pokemon._() : super._();
-
-  factory _Pokemon.fromJson(Map<String, dynamic> json) = _$PokemonImpl.fromJson;
 
   @override
   String get number;

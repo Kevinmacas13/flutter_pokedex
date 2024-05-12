@@ -1,6 +1,6 @@
 import 'dart:async';
 
-abstract class UseCase<Data, Params> {
+abstract base class UseCase<Data, Params> {
   const UseCase();
 
   FutureOr<Data> call(Params params);

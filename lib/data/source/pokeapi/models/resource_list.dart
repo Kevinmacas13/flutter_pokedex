@@ -27,3 +27,14 @@ class PokeApiNamedResourceList with _$PokeApiNamedResourceList {
   factory PokeApiNamedResourceList.fromJson(Map<String, dynamic> json) =>
       _$PokeApiNamedResourceListFromJson(json);
 }
+
+@freezed
+class PokeApiPaginatedParams with _$PokeApiPaginatedParams {
+  const factory PokeApiPaginatedParams({
+    required int limit,
+    required int offset,
+  }) = _PokeApiPaginatedParams;
+
+  factory PokeApiPaginatedParams.fromJson(Map<String, dynamic> json) =>
+      _$PokeApiPaginatedParamsFromJson(json);
+}
