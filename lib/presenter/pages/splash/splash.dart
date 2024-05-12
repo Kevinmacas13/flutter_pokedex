@@ -39,7 +39,7 @@ class _SplashPageState extends State<SplashPage> {
     });
   }
 
-  void _onLoadSuccess(SplashState value) {
+  void _onLoaded(SplashState value) {
     context.router.push(const HomeRoute());
   }
 
@@ -47,7 +47,7 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return MultiBlocListener(
       listeners: [
-        SplashLoadSuccessListener(listener: _onLoadSuccess),
+        SplashLoadedListener(listener: _onLoaded),
       ],
       child: const Scaffold(
         body: Center(

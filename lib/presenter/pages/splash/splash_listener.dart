@@ -14,14 +14,14 @@ class SplashListener extends BlocListener<SplashBloc, SplashState> {
         );
 }
 
-class SplashLoadSuccessListener extends SplashListener {
-  SplashLoadSuccessListener({
+class SplashLoadedListener extends SplashListener {
+  SplashLoadedListener({
     super.bloc,
     super.key,
     required super.listener,
   }) : super(
           listenWhen: (previous, current) =>
               previous.status != current.status &&
-              current.status == SplashStatus.success,
+              current.status == SplashStatus.loaded,
         );
 }

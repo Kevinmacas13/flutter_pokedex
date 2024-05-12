@@ -6,7 +6,7 @@ part 'splash_state.freezed.dart';
 enum SplashStatus {
   initial,
   loading,
-  success,
+  loaded,
 }
 
 @freezed

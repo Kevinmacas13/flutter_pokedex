@@ -19,6 +19,6 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
 
     await Future.delayed(const Duration(seconds: 1));
 
-    emit(state.copyWith(status: SplashStatus.success));
+    emit(state.copyWith(status: SplashStatus.loaded));
   }
 }
