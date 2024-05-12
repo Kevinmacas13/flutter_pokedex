@@ -7,8 +7,8 @@ part 'resource_list.g.dart';
 @freezed
 class PokeApiNamedResource with _$PokeApiNamedResource {
   const factory PokeApiNamedResource({
-    @JsonKey(name: 'name') required String name,
-    @JsonKey(name: 'url') required String url,
+    required String name,
+    required String url,
   }) = _PokeApiNamedResource;
 
   factory PokeApiNamedResource.fromJson(Map<String, dynamic> json) =>
@@ -18,10 +18,10 @@ class PokeApiNamedResource with _$PokeApiNamedResource {
 @freezed
 class PokeApiNamedResourceList with _$PokeApiNamedResourceList {
   const factory PokeApiNamedResourceList({
-    @JsonKey(name: 'count') required int count,
-    @JsonKey(name: 'next') required String? next,
-    @JsonKey(name: 'previous') required String? previous,
-    @JsonKey(name: 'results') required List<PokeApiNamedResource> results,
+    required int count,
+    required String? next,
+    required String? previous,
+    required List<PokeApiNamedResource> results,
   }) = _PokeApiNamedResourceList;
 
   factory PokeApiNamedResourceList.fromJson(Map<String, dynamic> json) =>

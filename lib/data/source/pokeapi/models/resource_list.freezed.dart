@@ -20,9 +20,7 @@ PokeApiNamedResource _$PokeApiNamedResourceFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PokeApiNamedResource {
-  @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'url')
   String get url => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -37,8 +35,7 @@ abstract class $PokeApiNamedResourceCopyWith<$Res> {
           $Res Function(PokeApiNamedResource) then) =
       _$PokeApiNamedResourceCopyWithImpl<$Res, PokeApiNamedResource>;
   @useResult
-  $Res call(
-      {@JsonKey(name: 'name') String name, @JsonKey(name: 'url') String url});
+  $Res call({String name, String url});
 }
 
 /// @nodoc
@@ -79,8 +76,7 @@ abstract class _$$PokeApiNamedResourceImplCopyWith<$Res>
       __$$PokeApiNamedResourceImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@JsonKey(name: 'name') String name, @JsonKey(name: 'url') String url});
+  $Res call({String name, String url});
 }
 
 /// @nodoc
@@ -115,18 +111,14 @@ class __$$PokeApiNamedResourceImplCopyWithImpl<$Res>
 class _$PokeApiNamedResourceImpl
     with DiagnosticableTreeMixin
     implements _PokeApiNamedResource {
-  const _$PokeApiNamedResourceImpl(
-      {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'url') required this.url});
+  const _$PokeApiNamedResourceImpl({required this.name, required this.url});
 
   factory _$PokeApiNamedResourceImpl.fromJson(Map<String, dynamic> json) =>
       _$$PokeApiNamedResourceImplFromJson(json);
 
   @override
-  @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: 'url')
   final String url;
 
   @override
@@ -174,18 +166,15 @@ class _$PokeApiNamedResourceImpl
 
 abstract class _PokeApiNamedResource implements PokeApiNamedResource {
   const factory _PokeApiNamedResource(
-          {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'url') required final String url}) =
-      _$PokeApiNamedResourceImpl;
+      {required final String name,
+      required final String url}) = _$PokeApiNamedResourceImpl;
 
   factory _PokeApiNamedResource.fromJson(Map<String, dynamic> json) =
       _$PokeApiNamedResourceImpl.fromJson;
 
   @override
-  @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: 'url')
   String get url;
   @override
   @JsonKey(ignore: true)
@@ -200,13 +189,9 @@ PokeApiNamedResourceList _$PokeApiNamedResourceListFromJson(
 
 /// @nodoc
 mixin _$PokeApiNamedResourceList {
-  @JsonKey(name: 'count')
   int get count => throw _privateConstructorUsedError;
-  @JsonKey(name: 'next')
   String? get next => throw _privateConstructorUsedError;
-  @JsonKey(name: 'previous')
   String? get previous => throw _privateConstructorUsedError;
-  @JsonKey(name: 'results')
   List<PokeApiNamedResource> get results => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -222,10 +207,10 @@ abstract class $PokeApiNamedResourceListCopyWith<$Res> {
       _$PokeApiNamedResourceListCopyWithImpl<$Res, PokeApiNamedResourceList>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'count') int count,
-      @JsonKey(name: 'next') String? next,
-      @JsonKey(name: 'previous') String? previous,
-      @JsonKey(name: 'results') List<PokeApiNamedResource> results});
+      {int count,
+      String? next,
+      String? previous,
+      List<PokeApiNamedResource> results});
 }
 
 /// @nodoc
@@ -278,10 +263,10 @@ abstract class _$$PokeApiNamedResourceListImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'count') int count,
-      @JsonKey(name: 'next') String? next,
-      @JsonKey(name: 'previous') String? previous,
-      @JsonKey(name: 'results') List<PokeApiNamedResource> results});
+      {int count,
+      String? next,
+      String? previous,
+      List<PokeApiNamedResource> results});
 }
 
 /// @nodoc
@@ -329,10 +314,9 @@ class _$PokeApiNamedResourceListImpl
     with DiagnosticableTreeMixin
     implements _PokeApiNamedResourceList {
   const _$PokeApiNamedResourceListImpl(
-      {@JsonKey(name: 'count') required this.count,
-      @JsonKey(name: 'next') required this.next,
-      @JsonKey(name: 'previous') required this.previous,
-      @JsonKey(name: 'results')
+      {required this.count,
+      required this.next,
+      required this.previous,
       required final List<PokeApiNamedResource> results})
       : _results = results;
 
@@ -340,17 +324,13 @@ class _$PokeApiNamedResourceListImpl
       _$$PokeApiNamedResourceListImplFromJson(json);
 
   @override
-  @JsonKey(name: 'count')
   final int count;
   @override
-  @JsonKey(name: 'next')
   final String? next;
   @override
-  @JsonKey(name: 'previous')
   final String? previous;
   final List<PokeApiNamedResource> _results;
   @override
-  @JsonKey(name: 'results')
   List<PokeApiNamedResource> get results {
     if (_results is EqualUnmodifiableListView) return _results;
     // ignore: implicit_dynamic_type
@@ -407,10 +387,9 @@ class _$PokeApiNamedResourceListImpl
 
 abstract class _PokeApiNamedResourceList implements PokeApiNamedResourceList {
   const factory _PokeApiNamedResourceList(
-          {@JsonKey(name: 'count') required final int count,
-          @JsonKey(name: 'next') required final String? next,
-          @JsonKey(name: 'previous') required final String? previous,
-          @JsonKey(name: 'results')
+          {required final int count,
+          required final String? next,
+          required final String? previous,
           required final List<PokeApiNamedResource> results}) =
       _$PokeApiNamedResourceListImpl;
 
@@ -418,16 +397,12 @@ abstract class _PokeApiNamedResourceList implements PokeApiNamedResourceList {
       _$PokeApiNamedResourceListImpl.fromJson;
 
   @override
-  @JsonKey(name: 'count')
   int get count;
   @override
-  @JsonKey(name: 'next')
   String? get next;
   @override
-  @JsonKey(name: 'previous')
   String? get previous;
   @override
-  @JsonKey(name: 'results')
   List<PokeApiNamedResource> get results;
   @override
   @JsonKey(ignore: true)

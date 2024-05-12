@@ -9,23 +9,23 @@ part of 'pokemon_properties.dart';
 _$PokemonGenderImpl _$$PokemonGenderImplFromJson(Map<String, dynamic> json) =>
     _$PokemonGenderImpl(
       genderless: json['genderless'] as bool,
-      maleRate: (json['maleRate'] as num).toDouble(),
-      femaleRate: (json['femaleRate'] as num).toDouble(),
+      maleRate: (json['male_rate'] as num).toDouble(),
+      femaleRate: (json['female_rate'] as num).toDouble(),
     );
 
 Map<String, dynamic> _$$PokemonGenderImplToJson(_$PokemonGenderImpl instance) =>
     <String, dynamic>{
       'genderless': instance.genderless,
-      'maleRate': instance.maleRate,
-      'femaleRate': instance.femaleRate,
+      'male_rate': instance.maleRate,
+      'female_rate': instance.femaleRate,
     };
 
 _$PokemonStatsImpl _$$PokemonStatsImplFromJson(Map<String, dynamic> json) =>
     _$PokemonStatsImpl(
       attack: (json['attack'] as num).toInt(),
-      specialAttack: (json['specialAttack'] as num).toInt(),
+      specialAttack: (json['special_attack'] as num).toInt(),
       defense: (json['defense'] as num).toInt(),
-      specialDefense: (json['specialDefense'] as num).toInt(),
+      specialDefense: (json['special_defense'] as num).toInt(),
       hp: (json['hp'] as num).toInt(),
       speed: (json['speed'] as num).toInt(),
     );
@@ -33,9 +33,9 @@ _$PokemonStatsImpl _$$PokemonStatsImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$PokemonStatsImplToJson(_$PokemonStatsImpl instance) =>
     <String, dynamic>{
       'attack': instance.attack,
-      'specialAttack': instance.specialAttack,
+      'special_attack': instance.specialAttack,
       'defense': instance.defense,
-      'specialDefense': instance.specialDefense,
+      'special_defense': instance.specialDefense,
       'hp': instance.hp,
       'speed': instance.speed,
     };

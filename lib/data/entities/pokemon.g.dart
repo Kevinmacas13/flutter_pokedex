@@ -18,15 +18,16 @@ _$PokemonImpl _$$PokemonImplFromJson(Map<String, dynamic> json) =>
       height: json['height'] as String,
       weight: json['weight'] as String,
       genera: json['genera'] as String,
-      eggGroups:
-          (json['eggGroups'] as List<dynamic>).map((e) => e as String).toList(),
+      eggGroups: (json['egg_groups'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
       gender: PokemonGender.fromJson(json['gender'] as Map<String, dynamic>),
       stats: PokemonStats.fromJson(json['stats'] as Map<String, dynamic>),
-      baseExp: (json['baseExp'] as num).toDouble(),
+      baseExp: (json['base_exp'] as num).toDouble(),
       evolutions: (json['evolutions'] as List<dynamic>)
           .map((e) => Pokemon.fromJson(e as Map<String, dynamic>))
           .toList(),
-      evolutionReason: json['evolutionReason'] as String,
+      evolutionReason: json['evolution_reason'] as String,
     );
 
 Map<String, dynamic> _$$PokemonImplToJson(_$PokemonImpl instance) =>
@@ -39,12 +40,12 @@ Map<String, dynamic> _$$PokemonImplToJson(_$PokemonImpl instance) =>
       'height': instance.height,
       'weight': instance.weight,
       'genera': instance.genera,
-      'eggGroups': instance.eggGroups,
+      'egg_groups': instance.eggGroups,
       'gender': instance.gender,
       'stats': instance.stats,
-      'baseExp': instance.baseExp,
+      'base_exp': instance.baseExp,
       'evolutions': instance.evolutions,
-      'evolutionReason': instance.evolutionReason,
+      'evolution_reason': instance.evolutionReason,
     };
 
 const _$PokemonTypesEnumMap = {

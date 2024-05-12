@@ -10,7 +10,7 @@ _$PokemonGenerationImpl _$$PokemonGenerationImplFromJson(
         Map<String, dynamic> json) =>
     _$PokemonGenerationImpl(
       title: json['title'] as String,
-      pokemonImages: (json['pokemonImages'] as List<dynamic>)
+      pokemonImages: (json['pokemon_images'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
     );
@@ -19,5 +19,5 @@ Map<String, dynamic> _$$PokemonGenerationImplToJson(
         _$PokemonGenerationImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
-      'pokemonImages': instance.pokemonImages,
+      'pokemon_images': instance.pokemonImages,
     };
