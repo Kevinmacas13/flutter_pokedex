@@ -14,6 +14,199 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
+/// @nodoc
+mixin _$BasicPokemon {
+  int get number => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get image => throw _privateConstructorUsedError;
+  List<PokemonTypes> get types => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $BasicPokemonCopyWith<BasicPokemon> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $BasicPokemonCopyWith<$Res> {
+  factory $BasicPokemonCopyWith(
+          BasicPokemon value, $Res Function(BasicPokemon) then) =
+      _$BasicPokemonCopyWithImpl<$Res, BasicPokemon>;
+  @useResult
+  $Res call({int number, String name, String image, List<PokemonTypes> types});
+}
+
+/// @nodoc
+class _$BasicPokemonCopyWithImpl<$Res, $Val extends BasicPokemon>
+    implements $BasicPokemonCopyWith<$Res> {
+  _$BasicPokemonCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? number = null,
+    Object? name = null,
+    Object? image = null,
+    Object? types = null,
+  }) {
+    return _then(_value.copyWith(
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: null == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
+      types: null == types
+          ? _value.types
+          : types // ignore: cast_nullable_to_non_nullable
+              as List<PokemonTypes>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$BasicPokemonImplCopyWith<$Res>
+    implements $BasicPokemonCopyWith<$Res> {
+  factory _$$BasicPokemonImplCopyWith(
+          _$BasicPokemonImpl value, $Res Function(_$BasicPokemonImpl) then) =
+      __$$BasicPokemonImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int number, String name, String image, List<PokemonTypes> types});
+}
+
+/// @nodoc
+class __$$BasicPokemonImplCopyWithImpl<$Res>
+    extends _$BasicPokemonCopyWithImpl<$Res, _$BasicPokemonImpl>
+    implements _$$BasicPokemonImplCopyWith<$Res> {
+  __$$BasicPokemonImplCopyWithImpl(
+      _$BasicPokemonImpl _value, $Res Function(_$BasicPokemonImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? number = null,
+    Object? name = null,
+    Object? image = null,
+    Object? types = null,
+  }) {
+    return _then(_$BasicPokemonImpl(
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: null == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
+      types: null == types
+          ? _value._types
+          : types // ignore: cast_nullable_to_non_nullable
+              as List<PokemonTypes>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$BasicPokemonImpl extends _BasicPokemon with DiagnosticableTreeMixin {
+  const _$BasicPokemonImpl(
+      {required this.number,
+      required this.name,
+      required this.image,
+      required final List<PokemonTypes> types})
+      : _types = types,
+        super._();
+
+  @override
+  final int number;
+  @override
+  final String name;
+  @override
+  final String image;
+  final List<PokemonTypes> _types;
+  @override
+  List<PokemonTypes> get types {
+    if (_types is EqualUnmodifiableListView) return _types;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_types);
+  }
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'BasicPokemon(number: $number, name: $name, image: $image, types: $types)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'BasicPokemon'))
+      ..add(DiagnosticsProperty('number', number))
+      ..add(DiagnosticsProperty('name', name))
+      ..add(DiagnosticsProperty('image', image))
+      ..add(DiagnosticsProperty('types', types));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BasicPokemonImpl &&
+            (identical(other.number, number) || other.number == number) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.image, image) || other.image == image) &&
+            const DeepCollectionEquality().equals(other._types, _types));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, number, name, image,
+      const DeepCollectionEquality().hash(_types));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$BasicPokemonImplCopyWith<_$BasicPokemonImpl> get copyWith =>
+      __$$BasicPokemonImplCopyWithImpl<_$BasicPokemonImpl>(this, _$identity);
+}
+
+abstract class _BasicPokemon extends BasicPokemon {
+  const factory _BasicPokemon(
+      {required final int number,
+      required final String name,
+      required final String image,
+      required final List<PokemonTypes> types}) = _$BasicPokemonImpl;
+  const _BasicPokemon._() : super._();
+
+  @override
+  int get number;
+  @override
+  String get name;
+  @override
+  String get image;
+  @override
+  List<PokemonTypes> get types;
+  @override
+  @JsonKey(ignore: true)
+  _$$BasicPokemonImplCopyWith<_$BasicPokemonImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 Pokemon _$PokemonFromJson(Map<String, dynamic> json) {
   return _Pokemon.fromJson(json);
 }
@@ -22,9 +215,9 @@ Pokemon _$PokemonFromJson(Map<String, dynamic> json) {
 mixin _$Pokemon {
   String get number => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
-  List<PokemonTypes> get types => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
+  List<PokemonTypes> get types => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
   String get height => throw _privateConstructorUsedError;
   String get weight => throw _privateConstructorUsedError;
   String get genera => throw _privateConstructorUsedError;
@@ -48,9 +241,9 @@ abstract class $PokemonCopyWith<$Res> {
   $Res call(
       {String number,
       String name,
-      String description,
-      List<PokemonTypes> types,
       String image,
+      List<PokemonTypes> types,
+      String description,
       String height,
       String weight,
       String genera,
@@ -80,9 +273,9 @@ class _$PokemonCopyWithImpl<$Res, $Val extends Pokemon>
   $Res call({
     Object? number = null,
     Object? name = null,
-    Object? description = null,
-    Object? types = null,
     Object? image = null,
+    Object? types = null,
+    Object? description = null,
     Object? height = null,
     Object? weight = null,
     Object? genera = null,
@@ -102,17 +295,17 @@ class _$PokemonCopyWithImpl<$Res, $Val extends Pokemon>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      description: null == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
+      image: null == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
               as String,
       types: null == types
           ? _value.types
           : types // ignore: cast_nullable_to_non_nullable
               as List<PokemonTypes>,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       height: null == height
           ? _value.height
@@ -180,9 +373,9 @@ abstract class _$$PokemonImplCopyWith<$Res> implements $PokemonCopyWith<$Res> {
   $Res call(
       {String number,
       String name,
-      String description,
-      List<PokemonTypes> types,
       String image,
+      List<PokemonTypes> types,
+      String description,
       String height,
       String weight,
       String genera,
@@ -212,9 +405,9 @@ class __$$PokemonImplCopyWithImpl<$Res>
   $Res call({
     Object? number = null,
     Object? name = null,
-    Object? description = null,
-    Object? types = null,
     Object? image = null,
+    Object? types = null,
+    Object? description = null,
     Object? height = null,
     Object? weight = null,
     Object? genera = null,
@@ -234,17 +427,17 @@ class __$$PokemonImplCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      description: null == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
+      image: null == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
               as String,
       types: null == types
           ? _value._types
           : types // ignore: cast_nullable_to_non_nullable
               as List<PokemonTypes>,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       height: null == height
           ? _value.height
@@ -292,9 +485,9 @@ class _$PokemonImpl extends _Pokemon with DiagnosticableTreeMixin {
   const _$PokemonImpl(
       {required this.number,
       required this.name,
-      required this.description,
-      required final List<PokemonTypes> types,
       required this.image,
+      required final List<PokemonTypes> types,
+      required this.description,
       required this.height,
       required this.weight,
       required this.genera,
@@ -317,7 +510,7 @@ class _$PokemonImpl extends _Pokemon with DiagnosticableTreeMixin {
   @override
   final String name;
   @override
-  final String description;
+  final String image;
   final List<PokemonTypes> _types;
   @override
   List<PokemonTypes> get types {
@@ -327,7 +520,7 @@ class _$PokemonImpl extends _Pokemon with DiagnosticableTreeMixin {
   }
 
   @override
-  final String image;
+  final String description;
   @override
   final String height;
   @override
@@ -361,7 +554,7 @@ class _$PokemonImpl extends _Pokemon with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Pokemon(number: $number, name: $name, description: $description, types: $types, image: $image, height: $height, weight: $weight, genera: $genera, eggGroups: $eggGroups, gender: $gender, stats: $stats, baseExp: $baseExp, evolutions: $evolutions, evolutionReason: $evolutionReason)';
+    return 'Pokemon(number: $number, name: $name, image: $image, types: $types, description: $description, height: $height, weight: $weight, genera: $genera, eggGroups: $eggGroups, gender: $gender, stats: $stats, baseExp: $baseExp, evolutions: $evolutions, evolutionReason: $evolutionReason)';
   }
 
   @override
@@ -371,9 +564,9 @@ class _$PokemonImpl extends _Pokemon with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('type', 'Pokemon'))
       ..add(DiagnosticsProperty('number', number))
       ..add(DiagnosticsProperty('name', name))
-      ..add(DiagnosticsProperty('description', description))
-      ..add(DiagnosticsProperty('types', types))
       ..add(DiagnosticsProperty('image', image))
+      ..add(DiagnosticsProperty('types', types))
+      ..add(DiagnosticsProperty('description', description))
       ..add(DiagnosticsProperty('height', height))
       ..add(DiagnosticsProperty('weight', weight))
       ..add(DiagnosticsProperty('genera', genera))
@@ -392,10 +585,10 @@ class _$PokemonImpl extends _Pokemon with DiagnosticableTreeMixin {
             other is _$PokemonImpl &&
             (identical(other.number, number) || other.number == number) &&
             (identical(other.name, name) || other.name == name) &&
+            (identical(other.image, image) || other.image == image) &&
+            const DeepCollectionEquality().equals(other._types, _types) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            const DeepCollectionEquality().equals(other._types, _types) &&
-            (identical(other.image, image) || other.image == image) &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.weight, weight) || other.weight == weight) &&
             (identical(other.genera, genera) || other.genera == genera) &&
@@ -416,9 +609,9 @@ class _$PokemonImpl extends _Pokemon with DiagnosticableTreeMixin {
       runtimeType,
       number,
       name,
-      description,
-      const DeepCollectionEquality().hash(_types),
       image,
+      const DeepCollectionEquality().hash(_types),
+      description,
       height,
       weight,
       genera,
@@ -447,9 +640,9 @@ abstract class _Pokemon extends Pokemon {
   const factory _Pokemon(
       {required final String number,
       required final String name,
-      required final String description,
-      required final List<PokemonTypes> types,
       required final String image,
+      required final List<PokemonTypes> types,
+      required final String description,
       required final String height,
       required final String weight,
       required final String genera,
@@ -468,11 +661,11 @@ abstract class _Pokemon extends Pokemon {
   @override
   String get name;
   @override
-  String get description;
+  String get image;
   @override
   List<PokemonTypes> get types;
   @override
-  String get image;
+  String get description;
   @override
   String get height;
   @override

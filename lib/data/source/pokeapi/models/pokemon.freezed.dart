@@ -26,7 +26,6 @@ mixin _$PokeApiPokemon {
   int get height => throw _privateConstructorUsedError;
   int get weight => throw _privateConstructorUsedError;
   String get locationAreaEncounters => throw _privateConstructorUsedError;
-  List<PokeApiPokemonMove> get moves => throw _privateConstructorUsedError;
   PokeApiPokemonSprites get sprites => throw _privateConstructorUsedError;
   PokeApiNamedResource get species => throw _privateConstructorUsedError;
   List<PokeApiPokemonStat> get stats => throw _privateConstructorUsedError;
@@ -51,7 +50,6 @@ abstract class $PokeApiPokemonCopyWith<$Res> {
       int height,
       int weight,
       String locationAreaEncounters,
-      List<PokeApiPokemonMove> moves,
       PokeApiPokemonSprites sprites,
       PokeApiNamedResource species,
       List<PokeApiPokemonStat> stats,
@@ -80,7 +78,6 @@ class _$PokeApiPokemonCopyWithImpl<$Res, $Val extends PokeApiPokemon>
     Object? height = null,
     Object? weight = null,
     Object? locationAreaEncounters = null,
-    Object? moves = null,
     Object? sprites = null,
     Object? species = null,
     Object? stats = null,
@@ -111,10 +108,6 @@ class _$PokeApiPokemonCopyWithImpl<$Res, $Val extends PokeApiPokemon>
           ? _value.locationAreaEncounters
           : locationAreaEncounters // ignore: cast_nullable_to_non_nullable
               as String,
-      moves: null == moves
-          ? _value.moves
-          : moves // ignore: cast_nullable_to_non_nullable
-              as List<PokeApiPokemonMove>,
       sprites: null == sprites
           ? _value.sprites
           : sprites // ignore: cast_nullable_to_non_nullable
@@ -166,7 +159,6 @@ abstract class _$$PokeApiPokemonImplCopyWith<$Res>
       int height,
       int weight,
       String locationAreaEncounters,
-      List<PokeApiPokemonMove> moves,
       PokeApiPokemonSprites sprites,
       PokeApiNamedResource species,
       List<PokeApiPokemonStat> stats,
@@ -195,7 +187,6 @@ class __$$PokeApiPokemonImplCopyWithImpl<$Res>
     Object? height = null,
     Object? weight = null,
     Object? locationAreaEncounters = null,
-    Object? moves = null,
     Object? sprites = null,
     Object? species = null,
     Object? stats = null,
@@ -226,10 +217,6 @@ class __$$PokeApiPokemonImplCopyWithImpl<$Res>
           ? _value.locationAreaEncounters
           : locationAreaEncounters // ignore: cast_nullable_to_non_nullable
               as String,
-      moves: null == moves
-          ? _value._moves
-          : moves // ignore: cast_nullable_to_non_nullable
-              as List<PokeApiPokemonMove>,
       sprites: null == sprites
           ? _value.sprites
           : sprites // ignore: cast_nullable_to_non_nullable
@@ -262,13 +249,11 @@ class _$PokeApiPokemonImpl
       required this.height,
       required this.weight,
       required this.locationAreaEncounters,
-      required final List<PokeApiPokemonMove> moves,
       required this.sprites,
       required this.species,
       required final List<PokeApiPokemonStat> stats,
       required final List<PokeApiPokemonType> types})
-      : _moves = moves,
-        _stats = stats,
+      : _stats = stats,
         _types = types;
 
   factory _$PokeApiPokemonImpl.fromJson(Map<String, dynamic> json) =>
@@ -286,14 +271,6 @@ class _$PokeApiPokemonImpl
   final int weight;
   @override
   final String locationAreaEncounters;
-  final List<PokeApiPokemonMove> _moves;
-  @override
-  List<PokeApiPokemonMove> get moves {
-    if (_moves is EqualUnmodifiableListView) return _moves;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_moves);
-  }
-
   @override
   final PokeApiPokemonSprites sprites;
   @override
@@ -316,7 +293,7 @@ class _$PokeApiPokemonImpl
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'PokeApiPokemon(id: $id, name: $name, baseExperience: $baseExperience, height: $height, weight: $weight, locationAreaEncounters: $locationAreaEncounters, moves: $moves, sprites: $sprites, species: $species, stats: $stats, types: $types)';
+    return 'PokeApiPokemon(id: $id, name: $name, baseExperience: $baseExperience, height: $height, weight: $weight, locationAreaEncounters: $locationAreaEncounters, sprites: $sprites, species: $species, stats: $stats, types: $types)';
   }
 
   @override
@@ -331,7 +308,6 @@ class _$PokeApiPokemonImpl
       ..add(DiagnosticsProperty('weight', weight))
       ..add(
           DiagnosticsProperty('locationAreaEncounters', locationAreaEncounters))
-      ..add(DiagnosticsProperty('moves', moves))
       ..add(DiagnosticsProperty('sprites', sprites))
       ..add(DiagnosticsProperty('species', species))
       ..add(DiagnosticsProperty('stats', stats))
@@ -351,7 +327,6 @@ class _$PokeApiPokemonImpl
             (identical(other.weight, weight) || other.weight == weight) &&
             (identical(other.locationAreaEncounters, locationAreaEncounters) ||
                 other.locationAreaEncounters == locationAreaEncounters) &&
-            const DeepCollectionEquality().equals(other._moves, _moves) &&
             (identical(other.sprites, sprites) || other.sprites == sprites) &&
             (identical(other.species, species) || other.species == species) &&
             const DeepCollectionEquality().equals(other._stats, _stats) &&
@@ -368,7 +343,6 @@ class _$PokeApiPokemonImpl
       height,
       weight,
       locationAreaEncounters,
-      const DeepCollectionEquality().hash(_moves),
       sprites,
       species,
       const DeepCollectionEquality().hash(_stats),
@@ -397,7 +371,6 @@ abstract class _PokeApiPokemon implements PokeApiPokemon {
       required final int height,
       required final int weight,
       required final String locationAreaEncounters,
-      required final List<PokeApiPokemonMove> moves,
       required final PokeApiPokemonSprites sprites,
       required final PokeApiNamedResource species,
       required final List<PokeApiPokemonStat> stats,
@@ -418,8 +391,6 @@ abstract class _PokeApiPokemon implements PokeApiPokemon {
   int get weight;
   @override
   String get locationAreaEncounters;
-  @override
-  List<PokeApiPokemonMove> get moves;
   @override
   PokeApiPokemonSprites get sprites;
   @override
@@ -610,167 +581,6 @@ abstract class _PokeApiPokemonType implements PokeApiPokemonType {
   @override
   @JsonKey(ignore: true)
   _$$PokeApiPokemonTypeImplCopyWith<_$PokeApiPokemonTypeImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-PokeApiPokemonMove _$PokeApiPokemonMoveFromJson(Map<String, dynamic> json) {
-  return _PokeApiPokemonMove.fromJson(json);
-}
-
-/// @nodoc
-mixin _$PokeApiPokemonMove {
-  PokeApiNamedResource get move => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $PokeApiPokemonMoveCopyWith<PokeApiPokemonMove> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $PokeApiPokemonMoveCopyWith<$Res> {
-  factory $PokeApiPokemonMoveCopyWith(
-          PokeApiPokemonMove value, $Res Function(PokeApiPokemonMove) then) =
-      _$PokeApiPokemonMoveCopyWithImpl<$Res, PokeApiPokemonMove>;
-  @useResult
-  $Res call({PokeApiNamedResource move});
-
-  $PokeApiNamedResourceCopyWith<$Res> get move;
-}
-
-/// @nodoc
-class _$PokeApiPokemonMoveCopyWithImpl<$Res, $Val extends PokeApiPokemonMove>
-    implements $PokeApiPokemonMoveCopyWith<$Res> {
-  _$PokeApiPokemonMoveCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? move = null,
-  }) {
-    return _then(_value.copyWith(
-      move: null == move
-          ? _value.move
-          : move // ignore: cast_nullable_to_non_nullable
-              as PokeApiNamedResource,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PokeApiNamedResourceCopyWith<$Res> get move {
-    return $PokeApiNamedResourceCopyWith<$Res>(_value.move, (value) {
-      return _then(_value.copyWith(move: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$PokeApiPokemonMoveImplCopyWith<$Res>
-    implements $PokeApiPokemonMoveCopyWith<$Res> {
-  factory _$$PokeApiPokemonMoveImplCopyWith(_$PokeApiPokemonMoveImpl value,
-          $Res Function(_$PokeApiPokemonMoveImpl) then) =
-      __$$PokeApiPokemonMoveImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({PokeApiNamedResource move});
-
-  @override
-  $PokeApiNamedResourceCopyWith<$Res> get move;
-}
-
-/// @nodoc
-class __$$PokeApiPokemonMoveImplCopyWithImpl<$Res>
-    extends _$PokeApiPokemonMoveCopyWithImpl<$Res, _$PokeApiPokemonMoveImpl>
-    implements _$$PokeApiPokemonMoveImplCopyWith<$Res> {
-  __$$PokeApiPokemonMoveImplCopyWithImpl(_$PokeApiPokemonMoveImpl _value,
-      $Res Function(_$PokeApiPokemonMoveImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? move = null,
-  }) {
-    return _then(_$PokeApiPokemonMoveImpl(
-      move: null == move
-          ? _value.move
-          : move // ignore: cast_nullable_to_non_nullable
-              as PokeApiNamedResource,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$PokeApiPokemonMoveImpl
-    with DiagnosticableTreeMixin
-    implements _PokeApiPokemonMove {
-  const _$PokeApiPokemonMoveImpl({required this.move});
-
-  factory _$PokeApiPokemonMoveImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PokeApiPokemonMoveImplFromJson(json);
-
-  @override
-  final PokeApiNamedResource move;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'PokeApiPokemonMove(move: $move)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PokeApiPokemonMove'))
-      ..add(DiagnosticsProperty('move', move));
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PokeApiPokemonMoveImpl &&
-            (identical(other.move, move) || other.move == move));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, move);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PokeApiPokemonMoveImplCopyWith<_$PokeApiPokemonMoveImpl> get copyWith =>
-      __$$PokeApiPokemonMoveImplCopyWithImpl<_$PokeApiPokemonMoveImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PokeApiPokemonMoveImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _PokeApiPokemonMove implements PokeApiPokemonMove {
-  const factory _PokeApiPokemonMove(
-      {required final PokeApiNamedResource move}) = _$PokeApiPokemonMoveImpl;
-
-  factory _PokeApiPokemonMove.fromJson(Map<String, dynamic> json) =
-      _$PokeApiPokemonMoveImpl.fromJson;
-
-  @override
-  PokeApiNamedResource get move;
-  @override
-  @JsonKey(ignore: true)
-  _$$PokeApiPokemonMoveImplCopyWith<_$PokeApiPokemonMoveImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

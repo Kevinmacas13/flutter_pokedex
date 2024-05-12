@@ -14,9 +14,6 @@ _$PokeApiPokemonImpl _$$PokeApiPokemonImplFromJson(Map<String, dynamic> json) =>
       height: (json['height'] as num).toInt(),
       weight: (json['weight'] as num).toInt(),
       locationAreaEncounters: json['location_area_encounters'] as String,
-      moves: (json['moves'] as List<dynamic>)
-          .map((e) => PokeApiPokemonMove.fromJson(e as Map<String, dynamic>))
-          .toList(),
       sprites: PokeApiPokemonSprites.fromJson(
           json['sprites'] as Map<String, dynamic>),
       species: PokeApiNamedResource.fromJson(
@@ -38,7 +35,6 @@ Map<String, dynamic> _$$PokeApiPokemonImplToJson(
       'height': instance.height,
       'weight': instance.weight,
       'location_area_encounters': instance.locationAreaEncounters,
-      'moves': instance.moves,
       'sprites': instance.sprites,
       'species': instance.species,
       'stats': instance.stats,
@@ -57,18 +53,6 @@ Map<String, dynamic> _$$PokeApiPokemonTypeImplToJson(
     <String, dynamic>{
       'slot': instance.slot,
       'type': instance.type,
-    };
-
-_$PokeApiPokemonMoveImpl _$$PokeApiPokemonMoveImplFromJson(
-        Map<String, dynamic> json) =>
-    _$PokeApiPokemonMoveImpl(
-      move: PokeApiNamedResource.fromJson(json['move'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$PokeApiPokemonMoveImplToJson(
-        _$PokeApiPokemonMoveImpl instance) =>
-    <String, dynamic>{
-      'move': instance.move,
     };
 
 _$PokeApiPokemonStatImpl _$$PokeApiPokemonStatImplFromJson(

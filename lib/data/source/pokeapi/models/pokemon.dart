@@ -14,7 +14,6 @@ class PokeApiPokemon with _$PokeApiPokemon {
     required int height,
     required int weight,
     required String locationAreaEncounters,
-    required List<PokeApiPokemonMove> moves,
     required PokeApiPokemonSprites sprites,
     required PokeApiNamedResource species,
     required List<PokeApiPokemonStat> stats,
@@ -34,16 +33,6 @@ class PokeApiPokemonType with _$PokeApiPokemonType {
 
   factory PokeApiPokemonType.fromJson(Map<String, dynamic> json) =>
       _$PokeApiPokemonTypeFromJson(json);
-}
-
-@freezed
-class PokeApiPokemonMove with _$PokeApiPokemonMove {
-  const factory PokeApiPokemonMove({
-    required PokeApiNamedResource move,
-  }) = _PokeApiPokemonMove;
-
-  factory PokeApiPokemonMove.fromJson(Map<String, dynamic> json) =>
-      _$PokeApiPokemonMoveFromJson(json);
 }
 
 @freezed

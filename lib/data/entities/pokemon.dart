@@ -8,14 +8,30 @@ import 'package:pokedex/data/entities/pokemon_types.dart';
 part 'pokemon.freezed.dart';
 part 'pokemon.g.dart';
 
+// FIXME: Abstracting Pokemon class
+
+@freezed
+class BasicPokemon with _$BasicPokemon {
+  const factory BasicPokemon({
+    required int number,
+    required String name,
+    required String image,
+    required List<PokemonTypes> types,
+  }) = _BasicPokemon;
+
+  const BasicPokemon._();
+
+  Color get color => types.first.color;
+}
+
 @freezed
 class Pokemon with _$Pokemon {
   const factory Pokemon({
     required String number,
     required String name,
-    required String description,
-    required List<PokemonTypes> types,
     required String image,
+    required List<PokemonTypes> types,
+    required String description,
     required String height,
     required String weight,
     required String genera,
@@ -29,12 +45,15 @@ class Pokemon with _$Pokemon {
 
   const Pokemon._();
 
-  factory Pokemon.fromJson(Map<String, Object?> json) => _$PokemonFromJson(json);
+  factory Pokemon.fromJson(Map<String, Object?> json) =>
+      _$PokemonFromJson(json);
 
   Color get color => types.first.color;
 
   Map<PokemonTypes, double> get typeEffectiveness {
-    final effectiveness = PokemonTypes.values.where((type) => type != PokemonTypes.unknown).map(
+    final effectiveness = PokemonTypes.values
+        .where((type) => type != PokemonTypes.unknown)
+        .map(
           (type) => MapEntry(
             type,
             types

@@ -10,11 +10,11 @@ _$PokemonImpl _$$PokemonImplFromJson(Map<String, dynamic> json) =>
     _$PokemonImpl(
       number: json['number'] as String,
       name: json['name'] as String,
-      description: json['description'] as String,
+      image: json['image'] as String,
       types: (json['types'] as List<dynamic>)
           .map((e) => $enumDecode(_$PokemonTypesEnumMap, e))
           .toList(),
-      image: json['image'] as String,
+      description: json['description'] as String,
       height: json['height'] as String,
       weight: json['weight'] as String,
       genera: json['genera'] as String,
@@ -34,9 +34,9 @@ Map<String, dynamic> _$$PokemonImplToJson(_$PokemonImpl instance) =>
     <String, dynamic>{
       'number': instance.number,
       'name': instance.name,
-      'description': instance.description,
-      'types': instance.types.map((e) => _$PokemonTypesEnumMap[e]!).toList(),
       'image': instance.image,
+      'types': instance.types.map((e) => _$PokemonTypesEnumMap[e]!).toList(),
+      'description': instance.description,
       'height': instance.height,
       'weight': instance.weight,
       'genera': instance.genera,
