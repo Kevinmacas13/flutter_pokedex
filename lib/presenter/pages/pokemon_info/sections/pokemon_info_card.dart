@@ -30,19 +30,19 @@ class _PokemonInfoCardState extends State<_PokemonInfoCard> {
           paddingAnimation: slideController,
           tabs: [
             MainTabData(
-              label: 'About',
+              label: 'Resumen',
               child: _PokemonAbout(pokemon),
             ),
             MainTabData(
-              label: 'Base Stats',
+              label: 'Estadisticas base',
               child: _PokemonBaseStats(pokemon),
             ),
             MainTabData(
-              label: 'Evolution',
+              label: 'Evolución',
               child: _PokemonEvolution(pokemon),
             ),
             const MainTabData(
-              label: 'Moves',
+              label: 'Movimientos',
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Text('Under development'),

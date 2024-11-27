@@ -6,6 +6,7 @@ part 'pokemon_generation.g.dart';
 
 @freezed
 class PokemonGeneration with _$PokemonGeneration {
+
   const factory PokemonGeneration({
     required String title,
     required List<String> pokemonImages,
@@ -14,3 +15,5 @@ class PokemonGeneration with _$PokemonGeneration {
   factory PokemonGeneration.fromJson(Map<String, Object?> json) =>
       _$PokemonGenerationFromJson(json);
 }
+
+

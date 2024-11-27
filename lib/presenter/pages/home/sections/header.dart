@@ -41,15 +41,15 @@ class _HeaderSection extends StatelessWidget implements PreferredSizeWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 36),
                 child: Text(
-                  'What Pokemon\nare you looking for?',
+                  'Qué pokemón\nestás buscando?',
                   style: context.appTheme.typographies.headingLarge,
                 ),
               ),
               AppSearchBar(
-                hintText: 'Search Pokemon, Move, Ability etc',
+                hintText: 'Buscar Pokemon, Movimiento, Habilidad etc',
               ),
               GridView(
-                padding: const EdgeInsets.symmetric(vertical: 36),
+                padding: const EdgeInsets.symmetric(vertical: 50),
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -65,24 +65,24 @@ class _HeaderSection extends StatelessWidget implements PreferredSizeWidget {
                     onPressed: () => context.router.push(const PokedexRoute()),
                   ),
                   const _CategoryCard(
-                    title: 'Moves',
+                    title: 'Movimientos',
                     color: AppColors.red,
                   ),
                   const _CategoryCard(
-                    title: 'Abilities',
+                    title: 'Habilidades',
                     color: AppColors.blue,
                   ),
                   _CategoryCard(
-                    title: 'Items',
+                    title: 'Objetos',
                     color: AppColors.yellow,
                     onPressed: () => context.router.push(const ItemsRoute()),
                   ),
                   const _CategoryCard(
-                    title: 'Locations',
+                    title: 'Ubicación',
                     color: AppColors.purple,
                   ),
                   _CategoryCard(
-                    title: 'Type Effects',
+                    title: 'Tipos',
                     color: AppColors.brown,
                     onPressed: () => context.router.push(const TypeEffectRoute()),
                   ),

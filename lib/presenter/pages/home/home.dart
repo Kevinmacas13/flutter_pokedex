@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pokedex/data/entities/item.dart';
 import 'package:pokedex/presenter/navigation/navigation.dart';
 import 'package:pokedex/data/states/settings/settings_bloc.dart';
 import 'package:pokedex/data/states/settings/settings_event.dart';

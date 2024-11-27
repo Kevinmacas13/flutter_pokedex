@@ -1,0 +1,10 @@
+C:/Users/kevin/Documents/GITHUB/Flutter Projects/Flutter_pokedex/windows/CMakeFiles/INSTALL.dir
+C:/Users/kevin/Documents/GITHUB/Flutter Projects/Flutter_pokedex/windows/CMakeFiles/ALL_BUILD.dir
+C:/Users/kevin/Documents/GITHUB/Flutter Projects/Flutter_pokedex/windows/CMakeFiles/ZERO_CHECK.dir
+C:/Users/kevin/Documents/GITHUB/Flutter Projects/Flutter_pokedex/windows/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+C:/Users/kevin/Documents/GITHUB/Flutter Projects/Flutter_pokedex/windows/flutter/CMakeFiles/flutter_wrapper_app.dir
+C:/Users/kevin/Documents/GITHUB/Flutter Projects/Flutter_pokedex/windows/flutter/CMakeFiles/flutter_assemble.dir
+C:/Users/kevin/Documents/GITHUB/Flutter Projects/Flutter_pokedex/windows/flutter/CMakeFiles/INSTALL.dir
+C:/Users/kevin/Documents/GITHUB/Flutter Projects/Flutter_pokedex/windows/runner/CMakeFiles/flutter_pokedex.dir
+C:/Users/kevin/Documents/GITHUB/Flutter Projects/Flutter_pokedex/windows/runner/CMakeFiles/INSTALL.dir
+C:/Users/kevin/Documents/GITHUB/Flutter Projects/Flutter_pokedex/windows/runner/CMakeFiles/ALL_BUILD.dir

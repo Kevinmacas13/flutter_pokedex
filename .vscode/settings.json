@@ -34,5 +34,5 @@
     "**/*.freezed.dart": true,
     "**/*.config.dart": true
   },
-  "cmake.sourceDirectory": "C:/Users/kevin/Documents/GitHub/flutter_pokedex/linux"
+  "cmake.sourceDirectory": "C:/Users/kevin/Documents/GITHUB/Flutter Projects/Flutter_pokedex/linux"
 }

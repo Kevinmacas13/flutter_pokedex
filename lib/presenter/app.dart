@@ -18,7 +18,8 @@ class PokedexApp extends StatelessWidget {
       enabled: MediaQuery.sizeOf(context).shortestSide > 600,
       builder: (_) => SettingsThemeSelector(
         builder: (theme) => MaterialApp.router(
-          title: 'Flutter Pokedex',
+          debugShowCheckedModeBanner: false,
+          title: 'Pokedex en Flutter',
           theme: theme.themeData,
           routerConfig: _router.config(),
           scrollBehavior: AppScrollBehavior(),
